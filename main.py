@@ -3,26 +3,31 @@
 from pulp import *
 
 # Creamos una lista con las posibles ubicaciones de las plantas
-Plantas = {"San Francisco",
-          "Los Angeles",
-          "Phoenix",
-          "Denver"}
+Ubications = {
+  "Aeropuerto",
+  "Palmira",
+  "Candelaria",
+  "El Cerrito",
+  "Florida",
+  "Pradera",
+}
 
 # Definimos la capacidad de las plantas usando un diccionario
 Capacidad = {
-          "San Francisco":1700,
-          "Los Angeles"  :2000,
-          "Phoenix"      :1700,
-          "Denver"       :2000
-          }
+"San Francisco":1700,
+"Los Angeles"  :2000,
+"Phoenix"      :1700,
+"Denver"       :2000
+}
 
 # Definimos el costo fijo de las plantas usando un diccionario
-CostoFijo = {
-          "San Francisco":70000,
-          "Los Angeles"  :70000,
-          "Phoenix"      :65000,
-          "Denver"       :70000
-          }
+Tolls = {
+  "Palmira"     :0,
+  "Candelaria"  :0,
+  "El Cerrito"  :0,
+  "Florida"     :0,
+  "Pradera"     :0
+}
 
 # Creamos la lista de tiendas o puntos de demanda
 Tiendas = ["San Diego",
@@ -31,33 +36,37 @@ Tiendas = ["San Diego",
           "Dallas"]
 
 # Creates a dictionary for the number of units of demand at each store
-Demanda = {
-          "San Diego":1700,
-          "Barstow"  :1000,
-          "Tucson"   :1500,
-          "Dallas"   :1200
-          }
+Demand = {
+"Palmira"     :272.69  ,
+"Candelaria"  :218.394 ,
+"El Cerrito"  :121     ,
+"Florida"     :231.682 ,
+"Pradera"     :14.234
+}
+
 
 # Se crea una lista de los costos de transporte
-CostosTransporte = [  #Stores
-         #SD BA TU DA
-         [5, 3, 2, 6], #SF
-         [4, 7, 8, 10],#LA    Plants
-         [6, 5, 3, 8], #PH
-         [9, 8, 6, 5]  #DE         
-         ]
+DistanceMatriz = [  #Stores
+  #PA    #CA   #EL   #FL   #PR   #A
+  [0,    19.5, 26.7, 32.4, 18.9, 14.8], #PA  D[0][i] 
+  [18.8, 0,    35.4, 18,   14.2, 23.9], #CA  D[1][i]      
+  [26.7, 34.6, 0,    53,   43.9, 32.5], #EL  D[2][i]      
+  [32.8, 18.6, 53.6, 0,    14.3, 53.8], #FL  D[3][i]    PLANTAS
+  [18.7, 14,   43.3, 14.1, 0,    38], #PR    D[4][i]    
+  [15.6, 23.9, 32.5, 53.8, 38,    0], #A      D[5][i]  
+]  
 
 # Se convierte la lista anterior en un diccionario asociandolo a las plantas y tiendas 
-costo_transporte = makeDict([Plantas,Tiendas],CostosTransporte,0)
+total_distance = makeDict([Ubications, Ubications], DistanceMatriz, 0)
+
+# x Se define la variable binaria de si se construye una planta o no
+x = LpVariable.dicts("x",(Ubications), 0, 1, LpInteger)
 
 # Se define la variable de decisión x que representa el flujo entre plantas y tiendas
-x = LpVariable.dicts("x",(Plantas,Tiendas),0,None,LpContinuous)
-
-# Se define la variable binaria de si se construye una planta o no
-y = LpVariable.dicts("y",(Plantas),0,1,LpInteger)
+y = LpVariable.dicts("y", (Plantas,Tiendas), 0, None, LpContinuous)
 
 # Se crea el problema 
-prob = LpProblem("Computer Plant Problem",LpMinimize)
+prob = LpProblem("planning problem of kits", LpMinimize)
 
 # Se agrega la función objetivo (la única diferencia es que esta ecuación no tiene lado derecho)
 prob += lpSum([[x[p][s]*costo_transporte[p][s] for p in Plantas] for s in Tiendas])+lpSum([CostoFijo[p]*y[p] for p in Plantas]),"Costo Total"
