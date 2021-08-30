@@ -1,0 +1,31 @@
+[
+  {
+    "city": "Zarzal",
+    "distance": 110.2,
+    "kits": 900,
+    "tolls": {
+      "total": 321
+    },
+    "zone": "sur_occidente"
+  },
+  {
+    "city": "Roldanillo",
+    "distance": 50.5,
+    "kits": 400,
+    "tolls": {
+      "number": 2,
+      "total": 30000
+    },
+    "zone": "sur_occidente"
+  },
+  {
+    "city": "La_Victoria",
+    "distance": 70.8,
+    "kits": 325,
+    "tolls": {
+      "number": 2,
+      "total": 12500
+    },
+    "zone": "sur_occidente"
+  }
+]

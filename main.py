@@ -1,62 +1,102 @@
 from pulp import *
 
-zone = input('Which zone do you want to open: ')
 
-file = open('objects/zone_' + zone.replace(' ', '_') + '.text')
-zone_object = json.loads(file.read())
-totals = []
-ubications = []
+def main():
+    zone = int(input('Which zone do you want to model: '
+                     '\n 1. Norte '
+                     '\n 2. Centro Tulua'
+                     '\n 3. Centro Buga '
+                     '\n 4. Sur Oriente '
+                     '\n 5. Sur Occidente '
+                     '\n\nType here: '))
+    zone_list = {
+        1: 'norte',
+        2: 'centro_tulua',
+        3: 'centro_buga',
+        4: 'sur_oriente',
+        5: 'sur_occidente',
+    }
 
-for x in zone_object:
-    ubications.append(x['city'])
-    totals.append(x['distance'])
-file.close()
+    # Empty variables to be assigned later and used on the model
+    totals = []
+    ubications = []
+    tolls = []
+    to_save = 0  # We can use this as a mark to check if the file below should be updated
+    file = ''
 
-# # Se convierte la lista anterior en un diccionario asociandolo a las plantas y tiendas
-total_distance = makeDict([ubications], totals)
+    # File where the zone object is located
+    file_path = 'objects/zone_' + zone_list[zone] + '.json'
 
-# print(total_distance)
+    # Check if zone file exist
+    try:
+        file = open(file_path)
+        # Do something with the file
+    except IOError:
+        print('This zone file doesnt exist yet, please create it first.')
+        exit()
 
-# # Se define la variable de decisión x que representa el flujo entre plantas y tiendas
-# x = LpVariable.dicts("x", (ubications, totals), 0, None, LpContinuous)
+    zone_object = json.loads(file.read())
 
-# x Se define la variable binaria de si se construye una planta o no
-y = LpVariable.dicts("y", ubications, 0, 1, LpBinary)
+    # Loop each city on the object and assign certain values to the empty variables declared before
+    for x in zone_object:
+        ubications.append(x['city'])
+        totals.append(x['distance'])
+        if 'tolls' not in x:
+            tolls_total = int(input('Tolls total for ' + x['city'] + ': '))
+            x['tolls'] = {'total': tolls_total}
+            tolls.append(x['tolls']['total'])
+            to_save = 1
+        else:
+            tolls.append(x['tolls']['total'])
+    file.close()
 
-# # Se crea el problema
-prob = LpProblem("planning_problem_of_kits", LpMinimize)
+    # File should be updated? Let's update it with new values.
+    if to_save == 1:
+        update_file(zone_object, file_path)
 
-# Se agrega la función objetivo (la única diferencia es que esta ecuación no tiene lado derecho)
-prob += lpSum([y[p] * total_distance[p] for p in ubications]), "Costo Total"
+    #
+    # This is where the model starts
+    #
 
-# rob += lpSum([x[p] * total_distance[p] for p in ubications]) + lpSum(
-#     [CostoFijo[p] * y[p] for p in Plantas]), "Costo Total"
-#
-# # El flujo despachado de cada planta no debe superar su capacidad(en caso de que se abra)
-# for p in Plantas:
-#     prob += lpSum([x[p][s] for s in Tiendas]) <= Capacidad[p] * y[p], "Sum of Products out of Plant %s" % p
-# El flujo despachado de cada planta no debe superar su capacidad(en caso de que se abra)
-prob += lpSum(y) == 1
-# for p in ubications:
-#     prob += lpSum([y[p]]) <= 1 or 0, "Sum of Products into Stores %s" % p
-#     prob += lpSum([y[p]]) <= 1 or 0, "Sum of Products into Stores %s" % p
-#
-# # LA demanda de cada cliente debe ser satisfecha
-# for s in Tiendas:
-#     prob += lpSum([x[p][s] for p in Plantas]) >= Demanda[s], "Sum of Products into Stores %s" % s
-#
-# # Se exporta el problema a un formato .lp
-prob.writeLP("ComputerPlantProblem.lp")
-#
-# # Se resuelve el problema usando el solver por defecto (CBC)
-prob.solve()
-#
-# # Se imprime el status del problema
-print("Status:", LpStatus[prob.status])
-#
-# # Se imprimen las variables
-for v in prob.variables():
-    print(v.name, "=", v.varValue)
-#
-# # Se imprime la función objetivo
-print("Costo Total = ", value(prob.objective))
+    # Associate totals with ubications(cities)
+    total_distance = makeDict([ubications], totals)
+
+    # Associate tolls with ubications
+    total_tolls = makeDict([ubications], tolls)
+
+    # Define a binary variable to determine which city will be used as CD.
+    y = LpVariable.dicts("y", ubications, 0, 1, LpBinary)
+
+    # Initializing problem
+    prob = LpProblem("planning_problem_of_kits", LpMinimize)
+
+    # Objective Function
+    prob += lpSum([y[p] * (total_distance[p] + total_tolls[p]) for p in ubications]), "Costo Total"
+
+    # First constraint, the sum of all "y" must be equals to "1" (one), this mean that only one city will be used as CD.
+    prob += lpSum(y) == 1
+
+    # Export problem as LP format
+    prob.writeLP("KitsProblem.lp")
+
+    # Solve Problems
+    prob.solve()
+
+    # Se imprime el status del problema
+    print("Status:", LpStatus[prob.status])
+    # Se imprimen las variables
+    for v in prob.variables():
+        print(v.name, "=", v.varValue)
+
+    # Se imprime la función objetivo
+    print("Costo Total = ", value(prob.objective))
+
+
+def update_file(obj, file_path):
+    file = open(file_path, 'w')
+    file.write(json.dumps(obj, indent=2, sort_keys=True))
+    file.close()
+
+
+if __name__ == '__main__':
+    main()
