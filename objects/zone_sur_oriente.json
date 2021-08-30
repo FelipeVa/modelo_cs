@@ -1,31 +1,32 @@
 [
   {
-    "city": "Zarzal",
-    "distance": 110.2,
-    "kits": 900,
-    "tolls": {
-      "total": 321
-    },
-    "zone": "sur_occidente"
+    "city": "Palmira",
+    "distance": 113.1,
+    "zone": "sur_oriente",
+    "kits": 1171
   },
   {
-    "city": "Roldanillo",
-    "distance": 50.5,
-    "kits": 400,
-    "tolls": {
-      "number": 2,
-      "total": 30000
-    },
-    "zone": "sur_occidente"
+    "city": "Candelaria",
+    "distance": 110.3,
+    "zone": "sur_oriente",
+    "kits": 9927
   },
   {
-    "city": "La_Victoria",
-    "distance": 70.8,
-    "kits": 325,
-    "tolls": {
-      "number": 2,
-      "total": 12500
-    },
-    "zone": "sur_occidente"
+    "city": "El_Cerrito",
+    "distance": 190.7,
+    "zone": "sur_oriente",
+    "kits": 5500
+  },
+  {
+    "city": "Florida",
+    "distance": 173.1,
+    "zone": "sur_oriente",
+    "kits": 10531
+  },
+  {
+    "city": "Pradera",
+    "distance": 128.1,
+    "zone": "sur_oriente",
+    "kits": 647
   }
 ]

@@ -54,9 +54,9 @@ def main():
     if to_save == 1:
         update_file(zone_object, file_path)
 
-    #
-    # This is where the model starts
-    #
+    # # # # # # # # # # # # # # # # # #
+    # This is where the model starts  #
+    # # # # # # # # # # # # # # # # # #
 
     # Associate totals with ubications(cities)
     total_distance = makeDict([ubications], totals)
