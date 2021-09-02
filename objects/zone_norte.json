@@ -1,0 +1,119 @@
+[
+  {
+    "city": "alcala",
+    "distance": 200.0,
+    "kits": 10742,
+    "tolls": {
+      "total": 200
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "ansermanuevo",
+    "distance": 100.0,
+    "kits": 7131,
+    "tolls": {
+      "total": 200
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "argelia",
+    "distance": 212.0,
+    "kits": 4342,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "cartago",
+    "distance": 212.0,
+    "kits": 8967,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "el_aguila",
+    "distance": 212.0,
+    "kits": 7953,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "el_cairo",
+    "distance": 212.0,
+    "kits": 7211,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "la_union",
+    "distance": 212.0,
+    "kits": 9227,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "la_victoria",
+    "distance": 212.0,
+    "kits": 1847,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "obando",
+    "distance": 212.0,
+    "kits": 6078,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "toro",
+    "distance": 212.0,
+    "kits": 4336,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "ulloa",
+    "distance": 212.0,
+    "kits": 992,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "versalles",
+    "distance": 212.0,
+    "kits": 9880,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "zarzal",
+    "distance": 212.0,
+    "kits": 11106,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  }
+]

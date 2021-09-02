@@ -1,0 +1,29 @@
+[
+  {
+    "city": "Tualua",
+    "distance": 200.0,
+    "kits": 100,
+    "tolls": {
+      "total": 200
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "Zarzal",
+    "distance": 100.0,
+    "kits": 200,
+    "tolls": {
+      "total": 200
+    },
+    "zone": "centro_tulua"
+  },
+  {
+    "city": "Roldanillo",
+    "distance": 212.0,
+    "kits": 2,
+    "tolls": {
+      "total": 21
+    },
+    "zone": "centro_tulua"
+  }
+]
