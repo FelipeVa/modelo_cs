@@ -1,47 +1,36 @@
 [
   {
-    "tolls": [
-      [0, 1, 1, 1, 1, 1],
-      [1, 0, 1, 1, 1, 1],
-      [1, 1, 0, 1, 1, 1],
-      [1, 1, 1, 0, 1, 1],
-      [1, 1, 1, 1, 0, 1],
-      [1, 1, 1, 1, 0, 10]
-    ]
-  },
-
-  {
     "city": "Palmira",
     "distance": 113.1,
     "zone": "sur_oriente",
-    "kits": 1171
+    "tolls": [0, 0, 0, 0, 0]
   },
 
   {
     "city": "Candelaria",
     "distance": 110.3,
     "zone": "sur_oriente",
-    "kits": 9927
+    "tolls": [0, 0, 0, 0, 0]
   },
 
   {
     "city": "El_Cerrito",
     "distance": 190.7,
     "zone": "sur_oriente",
-    "kits": 5500
+    "tolls": [0, 0, 0, 0, 0]
   },
 
   {
     "city": "Florida",
     "distance": 173.1,
     "zone": "sur_oriente",
-    "kits": 10531
+    "tolls": [0, 0, 0, 0, 0]
   },
 
   {
     "city": "Pradera",
     "distance": 128.1,
     "zone": "sur_oriente",
-    "kits": 647
+    "tolls": [0, 0, 0, 0, 0]
   }
 ]

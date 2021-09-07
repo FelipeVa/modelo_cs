@@ -1,13 +1,9 @@
 [
-  {
-    "city": "Zarzal",
-    "distance": 110.2,
-    "zone": "sur_occidente",
-    "kits": 900,
-    "tolls": {
-      "number": 2,
-      "total": 20000
-    }
+    {
+    "city": "Cali",
+    "distance":179.4,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
   },
   {
     "city": "Roldanillo",

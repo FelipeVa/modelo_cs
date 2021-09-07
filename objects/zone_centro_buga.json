@@ -1,0 +1,38 @@
+[
+  {
+    "city": "Buga",
+    "distance":186,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
+  },
+  {
+    "city": "Guacari",
+    "distance":211.1,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
+  },
+  {
+    "city": "Ginebra",
+    "distance":252.3,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
+  },
+  {
+    "city": "Restrepo",
+    "distance":294.6,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
+  },
+  {
+    "city": "Yotoco",
+    "distance": 198.4,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
+  },
+  {
+    "city": "Calima_Darien",
+    "distance":326,
+    "zone": "norte",
+    "tolls": [0, 0, 0, 0, 0, 0]
+  }
+]

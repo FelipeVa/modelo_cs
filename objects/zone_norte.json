@@ -3,117 +3,89 @@
     "city": "alcala",
     "distance": 200.0,
     "kits": 10742,
-    "tolls": {
-      "total": 200
-    },
-    "zone": "centro_tulua"
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "zone": "norte"
   },
   {
-    "city": "ansermanuevo",
-    "distance": 100.0,
-    "kits": 7131,
-    "tolls": {
-      "total": 200
-    },
-    "zone": "centro_tulua"
+    "city": "Ansermanuevo",
+    "distance": 644.2,
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "zone": "norte"
   },
   {
-    "city": "argelia",
-    "distance": 212.0,
-    "kits": 4342,
-    "tolls": {
-      "total": 21
-    },
-    "zone": "centro_tulua"
+    "city": "Argelia",
+    "distance": 866.7,
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "zone": "norte"
   },
   {
-    "city": "cartago",
-    "distance": 212.0,
+    "city": "Cartago",
+    "distance": 623.1,
     "kits": 8967,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "el_aguila",
-    "distance": 212.0,
+    "city": "El_Aguila",
+    "distance": 971.1,
     "kits": 7953,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "el_cairo",
-    "distance": 212.0,
+    "city": "El_Cairo",
+    "distance": 1217.8,
     "kits": 7211,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "la_union",
-    "distance": 212.0,
+    "city": "La_Union",
+    "distance": 681,
     "kits": 9227,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "la_victoria",
+    "city": "La_Victoria",
     "distance": 212.0,
     "kits": 1847,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "obando",
+    "city": "Obando",
     "distance": 212.0,
     "kits": 6078,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "toro",
+    "city": "Toro",
     "distance": 212.0,
     "kits": 4336,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "ulloa",
+    "city": "Ulloa",
     "distance": 212.0,
     "kits": 992,
-    "tolls": {
-      "total": 21
-    },
+    "tolls":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
+
   {
-    "city": "versalles",
+    "city": "Versalles",
     "distance": 212.0,
     "kits": 9880,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   },
   {
-    "city": "zarzal",
+    "city": "Zarzal",
     "distance": 212.0,
-    "kits": 11106,
-    "tolls": {
-      "total": 21
-    },
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "zone": "centro_tulua"
   }
 ]
