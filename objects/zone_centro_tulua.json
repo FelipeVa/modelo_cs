@@ -1,29 +1,68 @@
 [
   {
-    "city": "Tualua",
-    "distance": 200.0,
-    "kits": 100,
-    "tolls": {
-      "total": 200
+    "city": "Tulua",
+    "distance": 473.1,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
-    "zone": "centro_tulua"
-  },
   {
-    "city": "Zarzal",
-    "distance": 100.0,
-    "kits": 200,
-    "tolls": {
-      "total": 200
+    "city": "Andalucia",
+    "distance": 475.6,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
-    "zone": "centro_tulua"
-  },
+  {
+    "city": "Bugalagrande",
+    "distance": 510.5,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+  {
+    "city": "Trujillo",
+    "distance": 588.1,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+  {
+    "city": "Riofrio",
+    "distance": 490.4,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+  {
+    "city": "Caicedonia",
+    "distance": 905.5,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+  {
+    "city": "Sevilla",
+    "distance": 812.2,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+  {
+    "city": "San_Pedro",
+    "distance": 595.1,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
   {
     "city": "Roldanillo",
-    "distance": 212.0,
-    "kits": 2,
-    "tolls": {
-      "total": 21
+    "distance": 674.4,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
-    "zone": "centro_tulua"
-  }
+  {
+    "city": "Bolivar",
+    "distance": 656,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+  {
+    "city": "El_Dovio",
+    "distance": 857.5,
+    "zone": "centro_tulua",
+    "tolls": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }
 ]
